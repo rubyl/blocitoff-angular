@@ -1,20 +1,21 @@
 (function() {
-     function config($locationProvider, $stateProvider) {
+     function config($stateProvider, $locationProvider) {
          $locationProvider
-             .html5Mode({
-                 enabled: true,
-                 requireBase: false
-              });
+            .html5Mode({
+                enabled: true,
+                requireBase: false
+         });
 
          $stateProvider
-             .state('home', {
-                 url: '/',
-                 controller: 'HomeCtrl as home',
-                 templateUrl: '/templates/home.html'
-             });
+            .state('tasks', {
+            url: '/',
+            controller: 'TaskCtrl as task',
+            templateUrl: '/templates/task.html'
+         });
+
      }
 
-     angular
-         .module('Blocitoff', ['ui.router', 'firebase'])
-         .config(config);
+    angular
+        .module('Blocitoff', ['ui.router', 'firebase'])
+        .config(config);
  })();

@@ -5,8 +5,15 @@
     <meta charset="UTF-8">
     <title>Bloc Base Project</title>
     <link rel="stylesheet" href="/styles/main.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 </head>
 <body>
+
+    <div class="jumbotron text-center">
+      <h1>Tasks</h1>
+      <p>Lets bloc it off!</p>
+    </div>
+
     <ui-view></ui-view>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.4.2/angular-ui-router.min.js"></script>
@@ -24,5 +31,9 @@
       firebase.initializeApp(config);
     </script>
     <script src="/scripts/app.js"></script>
+    <script src="/scripts/services/Task.js"></script>
+    <script src="/scripts/controllers/TaskCtrl.js"></script>
+
+
 </body>
 </html>
