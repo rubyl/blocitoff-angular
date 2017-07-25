@@ -2,9 +2,14 @@
   <div class="row">
     <div class="col-md-12">
       <h2 style="text-decoration:underline">Current Tasks</h3>
-      <div class="tasks" ng-repeat="taskList in task.taskData">
-        <h4>{{ taskList.$value }}</h4>
+      <div class="tasks" ng-repeat="taskList in task.taskData" ng-hide="task.expiredTask(taskList.timestamp)">
+        <h4>{{ taskList.text }}</h4>
       </div>
+      <form ng-submit="task.addTask()">
+        Enter task and hit enter:
+        <input type="text" ng-model="task.text" name="text" />
+        <input type="submit" id="submit" value="Submit" />
+      </form>
     </div>
   </div>
 </div>
