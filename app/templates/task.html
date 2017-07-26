@@ -1,13 +1,15 @@
 <div class="container">
   <div class="row">
     <div class="col-md-12">
-      <h2 style="text-decoration:underline">Current Tasks</h3>
+      <h2 style="text-decoration:underline">Active Tasks</h3>
       <div class="tasks" ng-repeat="taskList in task.taskData" ng-hide="task.expiredTask(taskList.timestamp) || task.completedTask(taskList.completed)">
-        <h4>{{ taskList.text }}</h4>
+        <h4>- {{ taskList.text }} -- {{taskList.$priority}}</h4>
       </div>
-      <form ng-submit="task.addTask()">
+      <form ng-submit="task.addTask(task.data.selectedOption.name)">
         Enter task and hit enter:
         <input type="text" ng-model="task.text" name="text" />
+        <select name="mySelect" id="mySelect" ng-options="option.name for option in task.data.availableOptions track by option.id" ng-model="task.data.selectedOption">
+        </select>
         <input type="submit" id="submit" value="Submit" />
       </form>
     </div>
