@@ -11,7 +11,13 @@
             url: '/',
             controller: 'TaskCtrl as task',
             templateUrl: '/templates/task.html'
-         });
+         })
+
+         .state('taskhistory', {
+            url: '/taskhistory',
+            controller: "TaskCtrl as taskhistory",
+            templateUrl: '/templates/taskhistory.html'
+        });
 
      }
 

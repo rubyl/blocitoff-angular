@@ -3,7 +3,7 @@
 <html ng-app="Blocitoff">
 <head lang="en">
     <meta charset="UTF-8">
-    <title>Bloc Base Project</title>
+    <title>Bloc it off Project</title>
     <link rel="stylesheet" href="/styles/main.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 </head>
@@ -13,6 +13,15 @@
       <h1>Tasks</h1>
       <p>Lets bloc it off!</p>
     </div>
+
+    <nav class="navbar">
+      <div>
+        <a ui-sref="tasks" class="navbar-link">Active Tasks</a>
+      </div>
+      <div>
+        <a ui-sref="taskhistory" class="navbar-link">Task History</a>
+      </div>
+    </nav>
 
     <ui-view></ui-view>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>

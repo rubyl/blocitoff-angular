@@ -1,0 +1,10 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <h2 style="text-decoration:underline">Task History</h3>
+      <div class="tasks" ng-repeat="taskList in taskhistory.taskData" ng-show="taskhistory.expiredTask(taskList.timestamp) || taskhistory.completedTask(taskList.completed)">
+        <h4>{{ taskList.text }}</h4>
+      </div>
+    </div>
+  </div>
+</div>
