@@ -1,6 +1,9 @@
 (function () {
     function TaskCtrl(Task) {
         this.taskData = Task.all;
+        this.updateTask = function (task) {
+          Task.completeTask(task);
+        };
 
         this.addTask = function (priority) {
           if (this.text) {
